@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+		<!-- main header -->
+		{% block 'navbar' %}
+		{% include 'component/nav.html' %}
+		{% endblock %}
+    <!-- header END -->
+	<!-- Content -->
+	{% block 'content' %}
+	<div class="page-content bg-white">
+		<!-- inner page banner -->
+
+        <div class="bnr-inr bg-pt" style="background-image:url({{MEDIA_URL}}{{service_data.main_background_image.url}});">
+		
+			<div class="container">
+                <div class="bnr-inr-entry">
+				
+
+					<h1>{{service_data.main_heading}}</h1>
+				
+				
+					<!-- Breadcrumb row -->
+					<div class="breadcrumb-row">
+						<ul class="list-inline">
+
+							<li><a href="#">Home</a></li>
+					
+
+							<li>{{service_data.main_heading}}</li>
+						</ul>
+					</div>
+					<!-- Breadcrumb row END -->
+                </div>
+            </div>
+        </div>
+        <!-- inner page banner END -->
+        <!-- contact area -->
+        <div class="content-block">
+            <div class="section-full content-inner">
+                <div class="container">
+                    <div class="row">
+						<div class="col-lg-3 col-md-4">
+							<div class="sticky-top">
+								<ul class="service-list m-b30"> 
+									{% for s in service %}
+   
+									<li><a href="{% url 'service' s.pk %}">{{s.main_heading}}</a></li>
+									{% endfor %}
+								</ul>
+								<div class="download-brochure m-b30 ">
+									<h4>Brochure</h4>
+									<p>Working from home meant we could vary snack and coffee breaks.</p>
+									<a href="#" class="site-button">Download PDF</a>
+								</div>
+								<div class="service-help bg-primary m-b30 text-center">
+									<i class="flaticon-communications"></i>
+									<h4>Let's help you!</h4>
+									<ul>
+										<li>Minh City, Vietnam</li>
+										<li>0800-123456</li>
+										<li>example@demo.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>		
+						<div class="col-lg-9 col-md-8">
+							<h2 class="m-t0 m-b10 fw6">{{service_data.sub_heading}}</h2>
+							<p>{{service_data.description|slice:"323"|safe}}...</p>
+							<div class="row">
+								<div class="col-lg-4 col-md-6 col-sm-6">
+									<div class="box-bg m-b30 box-hover" style="background-image: url({{MEDIA_URL}}{{service_data.box_image.url}})">
+										<div class="icon-bx-wraper center p-lr20 p-tb30">
+											<div class="text-primary m-b30"> 
+												<span class="icon-cell icon-xl"><i class="flaticon-computer"></i></span> 
+											</div>
+											<div class="icon-content">
+												<h5 class="tilte">{{service_data.heading_title}}</h5>
+												<p>{{service_data.description_title|slice:"150"|safe}}...</p>
+											</div>
+											<a href="#" class="site-button-link border-link">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 col-sm-6">
+									<div class="box-bg m-b30 box-hover" style="background-image: url({{MEDIA_URL}}{{service_data.box_image1.url}})">
+										<div class="icon-bx-wraper center p-lr20 p-tb30">
+											<div class="text-primary m-b30"> 
+												<span class="icon-cell icon-xl"><i class="flaticon-support"></i></span> 
+											</div>
+											<div class="icon-content">
+												<h5 class="tilte">{{service_data.heading_title1}}</h5>
+												<p>{{service_data.description_title1|slice:"150"|safe}}...</p>
+											</div>
+											<a href="#" class="site-button-link border-link">Read More</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-12 col-sm-12">
+									<div class="box-bg m-b30 box-hover active" style="background-image: url({{MEDIA_URL}}{{service_data.box_image2.url}})">
+										<div class="icon-bx-wraper center p-lr20 p-tb30">
+											<div class="text-primary m-b30"> 
+												<span class="icon-cell icon-xl"><i class="flaticon-process"></i></span> 
+											</div>
+											<div class="icon-content">
+												<h5 class="tilte">{{service_data.heading_title2}}</h5>
+												<p>{{service_data.description_title2|slice:"150"|safe}}...</p>	
+												</div>
+											<a href="#" class="site-button-link border-link">Read More</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<img src="{{MEDIA_URL}}{{service_data.main_image.url}}" class="m-b20" alt=""/>
+							<p>{{service_data.description|slice:"323:"|safe}}</p>
+							<!-- <p class="m-b40">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> -->
+							<div class="row m-b50">
+								<div class="col-lg-6 col-md-12 m-b30" >
+									<div class="icon-bx-wraper bx-style-1 p-a20 left ho-box-">
+										<div class="icon-lg text-primary m-b20"> <a href="#" class="icon-cell text-primary"><i class="flaticon-analysis"></i></a> </div>
+										<div class="icon-content">
+											<h4 class="tilte">{{service_data.sub_heading_title}}</h4>
+											<p>{{service_data.sub_description_title}}</p>	
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-12" >
+									<div class="icon-bx-wraper bx-style-1 p-a20 left">
+										<div class="icon-lg text-primary m-b20"> <a href="#" class="icon-cell text-primary"><i class="flaticon-development"></i></a> </div>
+										<div class="icon-content">
+											<h4 class="tilte">{{service_data.sub_heading_title1}}</h4>
+											<p>{{service_data.sub_description_title1}}</p>	
+										</div>
+									</div>
+								</div>
+							</div>
+<!-- <									Chart.js for canvas for chat -->
+							<div class="row">
+								<div class="col-md-12 col-lg-12">
+									<canvas id="canvas"></canvas>
+								</div>
+							</div>
+							<!-- Here end chat.js -->
+
+
+							<div class="m-tb40">
+								<div class="accordion no-gap" id="accordion1">
+									<div class="panel">
+										<div class="acod-head">
+											<h6 class="acod-title"> 
+												<a href="#" data-toggle="collapse" data-target="#faq1" class="" aria-expanded="true">
+												{{service_data.question}}</a> </h6>
+										</div>
+										<div id="faq1" class="acod-body collapse show" data-parent="#accordion1" style="">
+											<div class="acod-content">{{service_data.answer}}</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="acod-head">
+											<h6 class="acod-title"> 
+												<a href="#" data-toggle="collapse" data-target="#faq2" class="collapsed" aria-expanded="false">
+													{{service_data.question1}}</a> </h6>
+												</div>
+										<div id="faq2" class="acod-body collapse" data-parent="#accordion1" style="">
+											<div class="acod-content">{{service_data.answer1}}</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="acod-head">
+											<h6 class="acod-title"> 
+												<a href="#" data-toggle="collapse" data-target="#faq3" class="collapsed" aria-expanded="false">
+													{{service_data.question2}}</a> </h6>
+										</div>
+										<div id="faq3" class="acod-body collapse" data-parent="#accordion1" style="">
+											<div class="acod-content">{{service_data.answer2}}</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="acod-head">
+											<h6 class="acod-title"> 
+												<a href="#" data-toggle="collapse" data-target="#faq4" class="collapsed" aria-expanded="false">
+													{{service_data.question3}}</a> </h6>
+										</div>
+										<div id="faq4" class="acod-body collapse" data-parent="#accordion1" style="">
+											<div class="acod-content">{{service_data.answer3}}</div>
+										</div>
+									</div>
+									<div class="panel">
+										<div class="acod-head">
+											<h6 class="acod-title"> 
+												<a href="#" data-toggle="collapse" data-target="#faq5" class="collapsed" aria-expanded="false">
+													{{service_data.question4}}</a> </h6>
+										</div>
+										<div id="faq5" class="acod-body collapse" data-parent="#accordion1" style="">
+											<div class="acod-content">{{service_data.answer4}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-6 col-md-6" >
+									<ul class="list-check primary">
+										<li>{{service_data.list_info}}</li>
+										<li>{{service_data.list_info1}}</li>
+										<li>Diipiscing Vestibulum</li>
+										<li>Vehicula Vulputate Ligula Mollis</li>
+									</ul>
+								</div>
+								<div class="col-lg-6 col-md-6" >
+									<ul class="list-check primary">
+										<li>Amet Sollicitudin Quam Dolor Mollis</li>
+										<li>Diipiscing Vestibulum Nullam</li>
+										<li>Diipiscing Vestibulum Nullam Venenatis</li>
+										<li>Vehicula Vulputate</li>
+									</ul>
+								</div>
+							</div>
+						</div>		
+					</div>
+				</div>
+            </div>
+        </div>
+		<!-- contact area END -->
+		
+    </div>
+	{% endblock %}
+    <!-- Content END-->
+	<!-- Footer -->
+    
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up"></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="js/jquery.min.js"></script><!-- JQUERY.MIN JS -->
+<script src="plugins/wow/wow.js"></script><!-- WOW JS -->
+<script src="plugins/bootstrap/js/popper.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="plugins/bootstrap-select/bootstrap-select.min.js"></script><!-- FORM JS -->
+<script src="plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script src="plugins/magnific-popup/magnific-popup.js"></script><!-- MAGNIFIC POPUP JS -->
+<script src="plugins/counter/waypoints-min.js"></script><!-- WAYPOINTS JS -->
+<script src="plugins/counter/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script src="plugins/imagesloaded/imagesloaded.js"></script><!-- IMAGESLOADED -->
+<script src="plugins/masonry/masonry-3.1.4.js"></script><!-- MASONRY -->
+<script src="plugins/masonry/masonry.filter.js"></script><!-- MASONRY -->
+<script src="plugins/owl-carousel/owl.carousel.js"></script><!-- OWL SLIDER -->
+<script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="js/carousel.js"></script><!-- SORTCODE FUCTIONS  -->
+
+
+<script src="js/ajax.js"></script><!-- CONTACT JS  -->
+</body>
+</html>

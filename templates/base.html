@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+	<meta name="robots" content="" />
+	<meta name="description" content="" />
+	<meta property="og:title" content="ZESTO - Consulting, Corporate Business Template" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+	<meta name="format-detection" content="telephone=no">
+	
+	<!-- FAVICONS ICON -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+	
+	<!-- PAGE TITLE HERE -->
+	<title>ZESTO - Consulting, Corporate Business Template</title>
+	
+	<!-- MOBILE SPECIFIC -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--[if lt IE 9] -->
+	<script src="{% static 'js/html5shiv.min.js' %}"></script>
+	<script src="{% static 'js/respond.min.js' %}"></script>
+	<!-- [endif] -->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+	<!-- STYLESHEETS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/plugins.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link class="skin" rel="stylesheet" type="text/css" href="{% static 'css/skin/skin-1.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/templete.css' %}">
+	<!-- Revolution Slider Css -->
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/revolution/revolution/css/layers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/revolution/revolution/css/settings.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/revolution/revolution/css/navigation.css' %}">
+    <!-- Revolution Navigation Style -->
+</head>
+<body id="bg">
+    <div class="page-wraper">
+        <div id="loading-area"></div>
+        <!-- header -->
+        <header class="daz-header header navs2 mobile-nav">
+            <div class="topbar bg-primary text-white">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="topbar-left">
+                            <ul class="top-author-link">
+                                <li><a href="about-1.html">About</a></li>
+                                <li><a href="faq.html">FAQ,s</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><i class="ti-email m-r5"></i> 									
+HERE is EMAIL                                </li>
+                            </ul>
+                        </div>
+                        <div class="topbar-right topbar-social">
+                            <ul>
+                                <li><a href="#" class="site-button sharp-sm white facebook hover"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="site-button sharp-sm white google-plus hover"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="site-button sharp-sm white twitter hover"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="site-button sharp-sm white instagram hover"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#" class="site-button sharp-sm white linkedin hover"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#" class="site-button sharp-sm white youtube hover"><i class="fa fa-youtube-play"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+
+
+            <!-- main header -->
+            {% block 'navbar' %}
+            {% endblock %}
+            <!-- main header END -->
+
+
+        
+        </header>
+        <!-- header END -->
+
+        <div class="page-content bg-white">
+            
+
+
+        {% block 'content' %}
+        {% endblock %}
+        </div>
+
+
+        <!-- Footer -->
+    <footer class="daz-footer text-uppercase daz-footer-img">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+					<div class="col-md-3 col-5 col-xl-2 col-lg-2 col-sm-6 footer-col-4">
+                        <div class="widget widget_services border-0">
+                            <h5 class="m-b30 text-white">Company</h5>
+                            <ul>
+                                <li><a href="index.html">About Us </a></li>
+                                <li><a href="index.html">Home </a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="about-1.html">About Us</a></li>
+                                <li><a href="services-2.html">Our Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="col-md-3 col-7 col-xl-2 col-lg-3 col-sm-6 footer-col-4">
+                        <div class="widget widget_services border-0">
+                            <h5 class="m-b30 text-white">Useful Link</h5>
+                            <ul>
+                                <li><a href="index.html">Create Account</a></li>
+                                <li><a href="index.html">Company Philosophy </a></li>
+                                <li><a href="contact.html">Corporate Culture</a></li>
+                                <li><a href="about-1.html">Portfolio</a></li>
+                                <li><a href="services-2.html">Client Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+					<div class="col-md-6 col-xl-4 col-lg-3 col-sm-6 footer-col-4">
+                        <div class="widget widget_getintuch">
+                            <h5 class="m-b30 text-white ">Contact us</h5>
+                            <ul>
+                                <li><i class="ti-location-pin"></i><strong>address</strong> Demo Address #05A Mahesh Nagar Dummy Road, United Kingdom </li>
+                                <li><i class="ti-mobile"></i><strong>phone</strong>0123-001234 (24/7 Support Line)</li>
+								<li><i class="ti-email"></i><strong>email</strong>info@example.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xl-4 col-lg-4 col-sm-6 footer-col-4 ">
+                        <div class="widget daz-newsbox">
+                            <h5 class="m-b30 text-white">Subscribe To Our Newsletter</h5>
+							<p class="text-capitalize m-b20">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the..</p>
+                            <div class="subscribe-form m-b20">
+								<form class="dazSubscribe" action="script/mailchamp.php" method="post">
+									<div class="dazSubscribeMsg"></div>
+									<div class="input-group">
+										<input name="dzEmail" required="required"  class="form-control" placeholder="Your Email Address" type="email">
+										<span class="input-group-btn">
+											<button name="submit" value="Submit" type="submit" class="site-button white radius-xl">Subscribe</button>
+										</span> 
+									</div>
+								</form>
+							</div>
+							<ul class="list-inline m-a0">
+								<li><a href="#" class="site-button white facebook sharp hover"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="site-button white google-plus sharp hover"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#" class="site-button white linkedin sharp hover"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="#" class="site-button white instagram sharp hover"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#" class="site-button white twitter sharp hover"><i class="fa fa-twitter"></i></a></li>
+							</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer bottom part -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-left "> <span>Copyright © 2018 DazzlerSoft</span> </div>
+                    <div class="col-md-6 col-sm-6 text-right "> 
+						<div class="widget-link "> 
+							<ul>
+								<li><a href="about-2.html"> About</a></li> 
+								<li><a href="help-desk.html"> Help Desk</a></li> 
+								<li><a href="privacy-policy.html"> Privacy Policy</a></li> 
+							</ul>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer END-->
+    <button class="scroltop fa fa-chevron-up"></button>
+</div>
+<!-- JAVASCRIPT FILES ========================================= -->
+<script src="{% static 'js/jquery.min.js' %}"></script><!-- JQUERY.MIN JS -->
+<script src="{% static 'plugins/wow/wow.js' %}"></script><!-- WOW JS -->
+<script src="{% static 'plugins/bootstrap/js/popper.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script><!-- BOOTSTRAP.MIN JS -->
+<script src="{% static 'plugins/bootstrap-select/bootstrap-select.min.js' %}"></script><!-- FORM JS -->
+<script src="{% static 'plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js' %}"></script><!-- FORM JS -->
+<script src="{% static 'plugins/magnific-popup/magnific-popup.js' %}"></script><!-- MAGNIFIC POPUP JS -->
+<script src="{% static 'plugins/counter/waypoints-min.js' %}"></script><!-- WAYPOINTS JS -->
+<script src="{% static 'plugins/counter/counterup.min.js' %}"></script><!-- COUNTERUP JS -->
+<script src="{% static 'plugins/imagesloaded/imagesloaded.js' %}"></script><!-- IMAGESLOADED -->
+<script src="{% static 'plugins/masonry/masonry-3.1.4.js' %}"></script><!-- MASONRY -->
+<script src="{% static 'plugins/masonry/masonry.filter.js' %}"></script><!-- MASONRY -->
+<script src="{% static 'plugins/owl-carousel/owl.carousel.js' %}"></script><!-- OWL SLIDER -->
+<script src="{% static 'js/custom.js' %}"></script><!-- CUSTOM FUCTIONS  -->
+<script src="{% static 'js/carousel.js' %}"></script><!-- SORTCODE FUCTIONS  -->
+<script src='https://www.google.com/recaptcha/api.js'></script> <!-- Google API For Recaptcha  -->
+<script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
+<script src="{% static 'js/ajax.js"></script><!-- CONTACT JS  -->
+<script src="{% static 'plugins/chart/Chart.bundle.js' %}"></script>
+<script src="{% static 'plugins/chart/utils.js' %}"></script>
+ <!-- revolution JS FILES -->
+<script src="{% static 'plugins/revolution/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'js/rev.slider.js' %}"></script>
+<script>
+jQuery(document).ready(function() {
+	'use strict';
+	dz_rev_slider_1();
+});	/*ready*/
+</script>
+
+<script>
+    // 3
+    grecaptcha.ready(function() {
+        // 4
+        $('#contactform').submit(function(e){
+            var form = this;
+            // 5
+            e.preventDefault()
+            grecaptcha.execute('reCAPTCHA_site_key', {action: 'contactform'}).then(function(token) {
+                // 6
+                $('#recaptcha').val(token)
+                // 7
+                form.submit()
+            });
+        })
+    });
+   </script>
+</body>
+</html>
